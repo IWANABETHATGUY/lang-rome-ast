@@ -2,10 +2,6 @@
   "name": "codemirror-lang-rome",
   "description": "A Rome-Ast mode for CodeMirror 6",
   "version": "6.0.0",
-  "author": {
-    "name": "Connor Brewster",
-    "email": "connor@repl.it"
-  },
   "type": "module",
   "main": "dist/index.cjs",
   "exports": {
