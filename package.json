@@ -1,7 +1,7 @@
 {
   "name": "codemirror-lang-rome-ast",
   "description": "A Rome-Ast mode for CodeMirror 6",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "main": "dist/index.cjs",
   "exports": {
@@ -12,6 +12,12 @@
   "module": "dist/index.js",
   "sideEffects": false,
   "license": "MIT",
+  "files": [
+    "dist/**",
+    "src/**",
+    "package.json",
+    "README.md"
+  ],
   "scripts": {
     "dev": "npm run build && vite ./dev",
     "build": "cm-buildhelper src/index.ts",
