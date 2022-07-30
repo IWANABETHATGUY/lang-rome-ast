@@ -1,7 +1,7 @@
 {
-  "name": "codemirror-lang-rome",
+  "name": "codemirror-lang-rome-ast",
   "description": "A Rome-Ast mode for CodeMirror 6",
-  "version": "6.0.0",
+  "version": "0.0.3",
   "type": "module",
   "main": "dist/index.cjs",
   "exports": {
@@ -15,8 +15,7 @@
   "scripts": {
     "dev": "npm run build && vite ./dev",
     "build": "cm-buildhelper src/index.ts",
-    "test": "cm-runtests",
-    "publish": "npm run build && npm publish"
+    "test": "cm-runtests"
   },
   "dependencies": {
     "@codemirror/autocomplete": "^6.0.0",
@@ -35,6 +34,7 @@
     "@codemirror/view": "6.0.0",
     "@lezer/generator": "^1.0.0",
     "codemirror": "^6.0.0",
+    "rome": "0.7.0-next.f6510d6",
     "vite": "^3.0.2"
   },
   "repository": {

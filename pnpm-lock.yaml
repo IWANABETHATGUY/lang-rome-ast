@@ -12,6 +12,7 @@ specifiers:
   '@lezer/highlight': ^1.0.0
   '@lezer/lr': ^1.0.0
   codemirror: ^6.0.0
+  rome: 0.7.0-next.f6510d6
   vite: ^3.0.2
 
 dependencies:
@@ -28,6 +29,7 @@ devDependencies:
   '@codemirror/theme-one-dark': 6.0.0
   '@lezer/generator': 1.1.0
   codemirror: 6.0.1
+  rome: 0.7.0-next.f6510d6
   vite: 3.0.2
 
 packages:
@@ -161,6 +163,54 @@ packages:
     resolution: {integrity: sha512-TgEpfm9br2SX8JwtwKT8HsQZKuFkLRg6g+IRxObk9nVKQLKnkP3oMh+QGcTBL9GQsfQ2ADtKPbj2iGSMf3ytiA==}
     dependencies:
       '@lezer/common': 1.0.0
+
+  /@rometools/cli-darwin-arm64/0.7.0-next.f6510d6:
+    resolution: {integrity: sha512-pGXWFPwsZrjcExZu3CGh3pLaM3dJAgC4az2t9MfBEhyjHK6KHCh1EMGAjre2sbFEOmxtaz+UoBDqritG0HJR1w==}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rometools/cli-darwin-x64/0.7.0-next.f6510d6:
+    resolution: {integrity: sha512-MpJn9mRGZYbupr4QUaVexdhcFKyMIzS0whXpa6xLTt9Oikm0ZYQBUyhULWnLd1i1tkjlMDfIm07H00nYbfMwpA==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rometools/cli-linux-arm64/0.7.0-next.f6510d6:
+    resolution: {integrity: sha512-aaKOaTAYOQRbalTwKmhzOH5e08BWtuk4lNpD7TdH4kklK/+IfY3zbw6C6FTHIYGfvC5jZRMLSLO8oFW+9b0PXA==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rometools/cli-linux-x64/0.7.0-next.f6510d6:
+    resolution: {integrity: sha512-1hFyT5s/9jL0uXeHZCEg18aPj//bB29z5vgNVBJS+SIvFyfNIGbRZOts5vu8ioF+h8n57KhLb4j3NumcAL/mzg==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rometools/cli-win32-arm64/0.7.0-next.f6510d6:
+    resolution: {integrity: sha512-knoxoYEpxVHlySOnDHW7RWnqW9o0APpMCr8ZGKyXHwGEQiOIjCoIVIxQ6jyj5U5sGwtMetNJgZ8lWSdMZkeHxA==}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rometools/cli-win32-x64/0.7.0-next.f6510d6:
+    resolution: {integrity: sha512-ntx0aSAZzLf82ezsCHLAoCEKJ91AiMpyVeD3ZtXExba3qiX1nW047LavAL0WTxbZ/E66uLdZEmXSfciEh7DFHQ==}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
 
   /@types/mocha/9.1.1:
     resolution: {integrity: sha512-Z61JK7DKDtdKTWwLeElSEBcWGRLY8g95ic5FoQqI9CMx0ns/Ghep3B4DfcEimiKMvtamNVULVNKEsiwV3aQmXw==}
@@ -1091,6 +1141,20 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  /rome/0.7.0-next.f6510d6:
+    resolution: {integrity: sha512-vg8juqZlOr5Xlj+aNcNdiKH6r5heyLCSqaMbh5BgV312vyYrM6Nm4KMFH1G/F+WFiAPweKc+GKG0G+/Z37NsfQ==}
+    engines: {node: '>=14.*'}
+    hasBin: true
+    requiresBuild: true
+    optionalDependencies:
+      '@rometools/cli-darwin-arm64': 0.7.0-next.f6510d6
+      '@rometools/cli-darwin-x64': 0.7.0-next.f6510d6
+      '@rometools/cli-linux-arm64': 0.7.0-next.f6510d6
+      '@rometools/cli-linux-x64': 0.7.0-next.f6510d6
+      '@rometools/cli-win32-arm64': 0.7.0-next.f6510d6
+      '@rometools/cli-win32-x64': 0.7.0-next.f6510d6
     dev: true
 
   /safe-buffer/5.1.2:
