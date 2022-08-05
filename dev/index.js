@@ -4,29 +4,22 @@ import { basicSetup } from "codemirror";
 import { parser, romeAst } from "../dist";
 // import { oneDark } from '@codemirror/theme-one-dark';
 
-const doc = `
-JsVariableStatement {
-    declaration: JsVariableDeclaration {
-        kind: LET_KW@0..4 "let" [] [Whitespace(" ")],
-        declarators: JsVariableDeclaratorList [
-            JsVariableDeclarator {
-                id: JsIdentifierBinding {
-                    name_token: IDENT@4..6 "a" [] [Whitespace(" ")],
+let doc = `
+JsUnknownParameter {
+    items: [
+        TsTypeAnnotation {
+            colon_token: COLON@119..121 ":" [] [Whitespace(" ")],
+            ty: TsReferenceType {
+                name: JsReferenceIdentifier {
+                    value_token: IDENT@121..138 "ErrorsTextOptions" [] [],
                 },
-                variable_annotation: missing (optional),
-                initializer: JsInitializerClause {
-                    eq_token: EQ@6..8 "=" [] [Whitespace(" ")],
-                    expression: JsNumberLiteralExpression {
-                        value_token: JS_NUMBER_LITERAL@8..9 "3" [] [],
-                    },
-                },
+                type_arguments: missing (optional),
             },
-        ],
-    },
-    semicolon_token: SEMICOLON@9..10 ";" [] [],
+        },
+    ],
 }
 `;
-
+doc = doc.replace(`"\n"`, `"\\n"`)
 new EditorView({
 	state: EditorState.create({
 		doc,
