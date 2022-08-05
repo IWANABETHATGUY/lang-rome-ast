@@ -14,7 +14,7 @@ SyntaxToken {
 }
 
 SyntaxNodeList {
-  SyntaxNodeType '[' 
+  SyntaxNodeType? '[' 
     ((SyntaxNode | SyntaxToken)  ',')*
   ']'
 }
