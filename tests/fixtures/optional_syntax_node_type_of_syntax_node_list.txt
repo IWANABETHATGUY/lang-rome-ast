@@ -1,0 +1,13 @@
+JsUnknownParameter {
+    items: [
+        TsTypeAnnotation {
+            colon_token: COLON@119..121 ":" [] [Whitespace(" ")],
+            ty: TsReferenceType {
+                name: JsReferenceIdentifier {
+                    value_token: IDENT@121..138 "ErrorsTextOptions" [] [],
+                },
+                type_arguments: missing (optional),
+            },
+        },
+    ],
+}
