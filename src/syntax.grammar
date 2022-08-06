@@ -4,8 +4,12 @@
 
 SyntaxNode {
   SyntaxNodeType '{' 
-    (SyntaxNodePair ',')+
+    SyntaxMemberList
   '}'
+}
+
+SyntaxMemberList {
+  (SyntaxNodePair ',')+
 }
 
 
@@ -15,7 +19,7 @@ SyntaxToken {
 
 SyntaxNodeList {
   SyntaxNodeType? '[' 
-    ((SyntaxNode | SyntaxToken)  ',')*
+    ((SyntaxNode | SyntaxToken | SyntaxNodeList)  ',')*
   ']'
 }
 

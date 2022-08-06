@@ -5,19 +5,30 @@ import { parser, romeAst } from "../dist";
 // import { oneDark } from '@codemirror/theme-one-dark';
 
 let doc = `
-JsUnknownParameter {
+
+JsUnknownMember {
     items: [
-        TsTypeAnnotation {
-            colon_token: COLON@119..121 ":" [] [Whitespace(" ")],
-            ty: TsReferenceType {
-                name: JsReferenceIdentifier {
-                    value_token: IDENT@121..138 "ErrorsTextOptions" [] [],
-                },
-                type_arguments: missing (optional),
+        TsPropertySignatureModifierList [
+            TsDeclareModifier {
+                modifier_token: DECLARE_KW@12..23 "declare" [Newline("\n"), Whitespace("  ")] [Whitespace(" ")],
+            },
+            TsReadonlyModifier {
+                modifier_token: READONLY_KW@23..32 "readonly" [] [Whitespace(" ")],
+            },
+        ],
+        JsLiteralMemberName {
+            value: IDENT@32..37 "test" [] [Whitespace(" ")],
+        },
+        JsInitializerClause {
+            eq_token: EQ@37..39 "=" [] [Whitespace(" ")],
+            expression: JsNumberLiteralExpression {
+                value_token: JS_NUMBER_LITERAL@39..40 "1" [] [],
             },
         },
+        SEMICOLON@40..41 ";" [] [],
     ],
 }
+
 `;
 doc = doc.replace(`"\n"`, `"\\n"`)
 new EditorView({
