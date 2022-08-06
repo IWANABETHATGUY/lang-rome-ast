@@ -1,0 +1,12 @@
+JsUnknownMember {
+    items: [
+        TsPropertySignatureModifierList [
+            TsDeclareModifier {
+                modifier_token: DECLARE_KW@12..23 "declare" [Newline("\n"), Whitespace("  ")] [Whitespace(" ")],
+            },
+            TsReadonlyModifier {
+                modifier_token: READONLY_KW@23..32 "readonly" [] [Whitespace(" ")],
+            },
+        ],
+    ],
+}
