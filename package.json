@@ -1,7 +1,7 @@
 {
   "name": "codemirror-lang-rome-ast",
   "description": "A Rome-Ast mode for CodeMirror 6",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "main": "dist/index.cjs",
   "exports": {
