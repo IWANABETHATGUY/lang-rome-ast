@@ -1,4 +1,4 @@
-import { EditorState } from "@codemirror/state";
+import { EditorSelection, EditorState } from "@codemirror/state";
 import { EditorView } from "@codemirror/view";
 import { basicSetup } from "codemirror";
 import { parser, romeAst } from "../dist";
@@ -30,11 +30,21 @@ JsUnknownMember {
 }
 
 `;
-doc = doc.replace(`"\n"`, `"\\n"`)
-new EditorView({
-	state: EditorState.create({
-		doc,
-		extensions: [basicSetup, romeAst(), EditorView.lineWrapping],
-	}),
-	parent: document.querySelector("#editor"),
+doc = doc.replace(`"\n"`, `"\\n"`);
+const editor = new EditorView({
+  state: EditorState.create({
+    doc,
+    extensions: [basicSetup, romeAst(), EditorView.lineWrapping],
+  }),
+  dispatch(dis) {
+    console.log(dis);
+    editor.update([dis]);
+  },
+  parent: document.querySelector("#editor"),
 });
+setTimeout(() => {
+  editor.dispatch({
+    selection: EditorSelection.create([EditorSelection.range(0, 10), EditorSelection.cursor(10)]),
+  });
+});
+// editor.view
